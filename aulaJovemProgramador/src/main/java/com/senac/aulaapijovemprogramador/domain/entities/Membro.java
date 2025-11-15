@@ -22,11 +22,10 @@ public class Membro {
     private Long id;
     private String nome;
     private LocalDate dataMatricula;
-    private StatusPlano StatusPlano;
+    private StatusPlano statusPlano = StatusPlano.ATIVO;
 
     public Membro(MembroRequestDTO membroRequestDTO){
         this.nome = membroRequestDTO.nome();
         this.dataMatricula = membroRequestDTO.dataMatricula();
-        this.StatusPlano = membroRequestDTO.StatusPlano();
     }
 }
